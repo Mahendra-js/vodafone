@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: secapp
+spec:
+  containers:
+  - name: app
+    image: redis
+    envFrom:
+      - secretRef:
+          name: secret1
